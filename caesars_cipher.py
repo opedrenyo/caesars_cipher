@@ -1,5 +1,9 @@
 import string
 
+from art import logo
+
+print(logo)
+
 alphabet = list(string.ascii_lowercase)
 end_alphabet = len(alphabet)-1
 
