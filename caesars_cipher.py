@@ -13,6 +13,7 @@ shift = int(input("Type the shift number:\n"))
 
 def cipher(plain_text, shift_amount):
     new_text = ""
+    shift_amount = shift_amount % 26
     for letter in plain_text:
         if letter.isalpha():
             letter_number = alphabet.index(letter)
