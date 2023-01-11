@@ -14,7 +14,7 @@ shift = int(input("Type the shift number:\n"))
 def cipher(plain_text, shift_amount):
     new_text = ""
     for letter in plain_text:
-        if not letter == " ":
+        if letter.isalpha():
             letter_number = alphabet.index(letter)
             if direction == "encode":
                 new_letter_number = letter_number+shift_amount
