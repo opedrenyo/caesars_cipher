@@ -6,3 +6,5 @@ In cryptography, a Caesar cipher, also known as Caesar's cipher, the shift ciphe
 * Python
 
 #### Modules used:
+* String &rarr; Used to extract alphabet to a list.
+
