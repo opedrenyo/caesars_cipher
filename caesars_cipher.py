@@ -7,13 +7,8 @@ print(logo)
 alphabet = list(string.ascii_lowercase)
 end_alphabet = len(alphabet)-1
 
-direction = input("Type 'encode' to encrypt, type 'decode' to decript:\n")
-text = input("Type your message:\n").lower()
-shift = int(input("Type the shift number:\n"))    
-
 def cipher(plain_text, shift_amount):
     new_text = ""
-    shift_amount = shift_amount % 26
     for letter in plain_text:
         if letter.isalpha():
             letter_number = alphabet.index(letter)
@@ -36,7 +31,22 @@ def cipher(plain_text, shift_amount):
             new_text += letter
     print(f"The {direction}d text is: {new_text}")
 
-cipher(text,shift)
+should_continue = True
+while should_continue:
+
+    direction = input("Type 'encode' to encrypt, type 'decode' to decript:\n")
+    text = input("Type your message:\n").lower()
+    shift = int(input("Type the shift number:\n"))
+    shift = shift % 26
+
+    cipher(text,shift)
+
+    result = input("Type 'yes' if you want to go again. Otherwise type 'no'.\n")
+    if result == "no":
+        should_continue = False
+        print("Goodbye")
+
+
 
 
 
